@@ -1532,7 +1532,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -16488,7 +16488,7 @@ var moment = createCommonjsModule(function (module, exports) {
 
     // MOMENTS
 
-    // Setting the hour should keep the time, because the user explicitly
+    // SettingController the hour should keep the time, because the user explicitly
     // specified which hour they want. So trying to maintain the same hour (in
     // a new timezone) makes sense. Adding/subtracting hours does not follow
     // this rule.

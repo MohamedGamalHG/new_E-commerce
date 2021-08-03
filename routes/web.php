@@ -40,7 +40,7 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ //...
 
-      Route::group(['middleware'=>'IsAdmin','namespace'=>'Admin'],function (){
+      Route::group(['middleware'=>'IsAdmin','namespace'=>'Admin','prefix'=>'admin'],function (){
             require_once __DIR__.'/admin.php';
       });
 

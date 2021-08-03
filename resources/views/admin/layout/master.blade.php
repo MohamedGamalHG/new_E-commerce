@@ -4,7 +4,7 @@
 
 <div class="wrapper">
     <div class="content-wrapper">
-        @yield('index')
+        @yield('content')
     </div>
 </div>
 
