@@ -6,7 +6,6 @@
     <title>{{getSetting('currency')}}  | @yield('title')</title>{{--getSettig function from databse helper --}}
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{url($plugins)}}/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -25,6 +24,11 @@
     <link rel="stylesheet" href="{{url($plugins)}}/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="{{url($plugins)}}/summernote/summernote-bs4.min.css">
+    {{--Data table--}}
+    <link rel="stylesheet" href="{{url($plugins)}}/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{url($plugins)}}/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{url($plugins)}}/datatables-buttons/css/buttons.bootstrap4.min.css">
+    {{--End Data table--}}
     @yield('style')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">

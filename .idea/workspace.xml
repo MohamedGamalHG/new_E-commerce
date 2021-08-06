@@ -20,27 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="204859f3-2dfe-49fc-91dd-661c883cd7e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/home/setting.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/Edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Panel/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Panel/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helper/ArrayHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/ArrayHelper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helper/DatabaseHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/DatabaseHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helper/HtmlHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helper/HtmlHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/chart.js/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/datatables-scroller/js/dataTables.scroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/datatables-scroller/js/dataTables.scroller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/datatables/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/dropzone/dropzone-amd-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/dropzone/dropzone-amd-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/dropzone/dropzone.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/dropzone/dropzone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/flot/plugins/jquery.flot.errorbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/flot/plugins/jquery.flot.errorbars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/flot/plugins/jquery.flot.image.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/flot/plugins/jquery.flot.image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/jquery-ui/jquery-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/jquery-ui/jquery-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/moment/moment-with-locales.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/moment/moment-with-locales.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Panel/plugins/pdfmake/pdfmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Panel/plugins/pdfmake/pdfmake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,19 +172,27 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1wAbbOXHqgsZk3Xx7WGwrewCY8v" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Admin" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test\app\Http\Requests\Admin" />
+      <recent name="C:\xampp\htdocs\test\resources\views\admin\user" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test\resources\views\admin" />
       <recent name="C:\xampp\htdocs\test\app" />
       <recent name="C:\xampp\htdocs\test\app\Models" />
     </key>
@@ -206,7 +214,9 @@
       <workItem from="1627904412200" duration="2957000" />
       <workItem from="1627914209346" duration="9512000" />
       <workItem from="1627944739079" duration="174000" />
-      <workItem from="1627987629042" duration="8876000" />
+      <workItem from="1627987629042" duration="9198000" />
+      <workItem from="1628183994891" duration="12302000" />
+      <workItem from="1628249399882" duration="7840000" />
     </task>
     <servers />
   </component>
@@ -223,6 +233,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="582" y="182" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1627989029834">
@@ -233,9 +247,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="340" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1627914413063" />
-    <state x="477" y="150" width="581" height="534" key="find.popup" timestamp="1627917957917">
+    <state x="477" y="150" width="581" height="592" key="find.popup" timestamp="1628185198378">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="477" y="150" width="581" height="534" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1627917957917" />
+    <state x="477" y="150" width="581" height="592" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1628185198378" />
   </component>
 </project>

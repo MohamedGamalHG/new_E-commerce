@@ -17,7 +17,7 @@ class Setting extends Model
             $array = explode(',',$this->attributes['options']);
         return $array;
     }
-    public function getValueAttribute(){
+    public function getRealValueAttribute(){
         //$this->options access the field option in database because we make it null or like currency have a data
         $set = $this->options;
         /*

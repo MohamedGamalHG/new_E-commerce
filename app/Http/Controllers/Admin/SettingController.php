@@ -19,14 +19,14 @@ class SettingController extends Controller
             to except from the array one or  more paramater like
             Arr::except($req->toArray(),['_token','password'....])
         */
-        return $req;
-        Arr::except($req->toArray(),['_token']);
-        $test = Setting::where('id',$req->id)->firstOrFail()->update();
+        //return $req;
+        //Arr::except($req->toArray(),['_token']);
+        //$test = Setting::where('id',$req->id)->firstOrFail()->update();
         //return  $test;
-        /*foreach(Arr::except($req->toArray(),['_token']) as $key => $value) {
+        foreach(Arr::except($req->toArray(),['_token']) as $key => $value) {
 
             Setting::where('name',$key)->firstOrFail()->update(['value'=>$value]);
-        }*/
+        }
         return redirect()->back();//->withFlashMessage('admin.update');
     }
 }
