@@ -14,5 +14,8 @@ return[
     'user'               => 'User',
     'admin'              => 'Admin',
     'get-name'           =>'User',
-    'create'             => 'Create :name'
+    'create'             => 'Create :name',
+    'deletes'             => 'Delete User',
+    'updates'             => 'Updated User',
+    'creates'             => 'Created User',
 ];

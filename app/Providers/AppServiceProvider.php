@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use View;
+use Auth;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -19,7 +20,11 @@ class AppServiceProvider extends ServiceProvider
         View::share('dist_js',$path_dist.'/js');
         View::share('dist_img',$path_dist.'/img');
         View::share('plugins',$path_plugin);
-
+        // this code like Auth::user()->name in blade template but with this code i will put there $auth->name direct just
+        view()->composer('*',function($view){
+           $user = Auth::user();
+           $view->with('auth',$user);
+        });
     }
 
     /**

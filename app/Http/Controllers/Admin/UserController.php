@@ -22,8 +22,9 @@ class UserController extends Controller
         return DataTables::of($user)->
             rawColumns(['action'])
             ->editColumn('action',function ($model){
-                $edit = editIcon(route('user.edit',$model->id));
-                return $edit;
+                $edit = editIconEdit(route('user.edit',$model->id));
+                $delet = editIconDelete(route('user.delete',$model->id));
+                return $edit .' '. $delet;
             })
             ->make(true);
 
@@ -34,7 +35,7 @@ class UserController extends Controller
     public function store(UserRequest $req){
 
         $user = User::create($req->all());
-        return redirect(route('user.index'))->withFlashMessage(trans('create'));
+        return redirect(route('user.index'))->withFlashMessage(trans('admin.creates'));
     }
     public function edit($id){
         $user = User::findOrFail($id);
@@ -43,8 +44,21 @@ class UserController extends Controller
     public  function update($id,EditRequest $req)
     {
         $user = User::findorFail($id);
-        return $user;
+        //return $user;
         $user->update($req->all());
-        return redirect(route('user.index'))->withFlashMessage(trans('update'));
+        return redirect(route('user.index'))->withFlashMessage(trans('admin.updates'));
+    }
+    public function destroy($id)
+    {
+        if($id != '1') {
+            $user = User::findorFail($id);
+            $user->delete();
+        }
+        return redirect(route('user.index'))->withFlashMessage(trans('admin.deletes'));
+    }
+    public  function confirmation($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admin.user.delete',compact('user'));
     }
 }

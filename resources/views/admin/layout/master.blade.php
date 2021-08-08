@@ -4,6 +4,7 @@
 
 <div class="wrapper">
     <div class="content-wrapper">
+        @include('admin.layout.alert')
         @yield('content')
     </div>
 </div>
